@@ -8,19 +8,13 @@ We are still in the design phase of this project.  Details are to come.
 
 ### Installing
 
-## Tests
-
-## Deployment
-
 ## Technologies Used
 
 * HTML
 * CSS/Sass
 * Javascript ES2015/ES6
-* JAMStack
-* Hugo
-* Netlify CMS
-
+* Jekyll
+* Github Pages
 ## Licence 
 
 ## Acknowledgments
