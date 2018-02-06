@@ -1,0 +1,26 @@
+header {
+  // background-image: url(/assets/portrait-girl.jpg);
+  // background-position: center;
+  // background-size: cover;
+  @include bgImage("/assets/portrait-girl.jpg");
+  padding: 0px 15px;
+  text-align: center;
+  margin: 0;
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main__titlesection {
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.main__title {
+  color: #fff;
+}
+
+.main__subtitle {
+  color: #fff;
+}

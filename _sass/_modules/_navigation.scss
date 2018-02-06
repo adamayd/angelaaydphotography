@@ -1,51 +1,7 @@
-body {
-  margin: 0;
-  color: $font-color;
-  font-family: $font-style;
-  font-size: 1.1em;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: $link-color;
-  text-decoration: underline;
-  font-weight: bold;
-  &:hover {
-    color: $link-hover-color;
-    text-decoration: underline;
-  }
-}
-
-header {
-  background-image: url(/assets/portrait-girl.jpg);
-  background-position: center;
-  background-size: cover;
-  padding: 0px 15px;
-  text-align: center;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-main {
-  padding: 0 15px;
-  max-width: $content-width;
-  margin: 0 auto;
-}
-
-time {
-  color: #898989;
-}
-
 .container {
   max-width: $content-width;
   margin: 0 auto;
 }
-
-/* Aside */
 
 aside {
   position: fixed;
@@ -94,17 +50,4 @@ aside {
     text-decoration: none;
     color: $main;
   }
-}
-
-.main__titlesection {
-  flex-direction: column;
-  align-content: flex-end;
-}
-
-.main__title {
-  color: #fff;
-}
-
-.main__subtitle {
-  color: #fff;
 }

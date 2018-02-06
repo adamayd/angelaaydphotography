@@ -3,8 +3,12 @@
 ---
 
 @import "base";
-@import "layout";
+@import "mixins";
 
+@import "_modules/navigation";
+@import "_modules/header";
+@import "_modules/main";
+@import "_modules/post";
 @import "_modules/footer";
 
 /*  "syntax-highlighting" */
