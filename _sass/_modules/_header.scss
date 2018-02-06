@@ -15,12 +15,20 @@ header {
 .main__titlesection {
   flex-direction: column;
   align-content: flex-end;
+  padding-bottom: 50px;
 }
 
 .main__title {
   color: #fff;
+  font-family: 'Allura', cursive;
+  font-weight: 400;
+  font-size: 3.5em;
+  margin: 0;
 }
 
 .main__subtitle {
   color: #fff;
+  margin-top: -15px;
+  font-weight: 400;
+  font-size: 0.8em;
 }
