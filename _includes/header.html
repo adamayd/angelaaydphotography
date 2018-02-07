@@ -2,15 +2,19 @@
   <div class="container">
     <nav>
       <ul>
+        <li><a href="{{ site.url | prepend: site.baseurl }}" class="nav__link">Home</a></li>
         {% for page in site.pages %} {% if page.title %}
-        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        <li><a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a></li>
         {% endif %} {% endfor %}
-        <li><a href="{{ "/blog" | prepend: site.baseurl }}">Blog</a></li>
+        <li><a href="{{ "/blog" | prepend: site.baseurl }}" class="nav__link">Blog</a></li>
       </ul>
     </nav>
   </div>
 </aside>
 
 <header>
-  <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+  <div class="main__titlesection">
+    <h1 class="main__title">{{ site.title }}</h1>
+    <h4 class="main__subtitle">Capturing the moments that captivate your heart</h4>
+  </div>
 </header>
