@@ -2,7 +2,7 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@import {{ site:theme }};
+@import "minima";
 
 @import "base";
 @import "mixins";
