@@ -29,7 +29,7 @@ include: ['_pages']
 kramdown:
   input: GFM
 # markdown: kramdown
-# theme: minima
+theme: minima
 plugins:
   - jekyll-feed
 
