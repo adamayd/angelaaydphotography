@@ -2,7 +2,7 @@ header {
   // background-image: url(/assets/portrait-girl.jpg);
   // background-position: center;
   // background-size: cover;
-  @include bgImage("/assets/portrait-girl.jpg");
+  @include bgImage("../assets/portrait-girl.jpg");
   padding: 0px 15px;
   text-align: center;
   margin: 0;
