@@ -1,0 +1,39 @@
+.footer__area {
+  padding: 40px 0;
+}
+
+.footer__container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__section {
+  width: 25%;
+  padding-right: 30px;
+  font-size: 0.6em; 
+  font-family: 'Muli', sans-serif;
+  color: $link-color;
+}
+
+.footer__section-form {
+  display: flex;
+  align-items: center;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  color: $font-color;
+  font-size: 1.2em;
+}
+
+.footer__input {
+  text-align: center;
+  width: 100%;
+}
+
+.footer__button {
+  width: 100%;
+}
