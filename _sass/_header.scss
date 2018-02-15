@@ -1,0 +1,34 @@
+header {
+  // background-image: url(/assets/portrait-girl.jpg);
+  // background-position: center;
+  // background-size: cover;
+  @include bgImage("../assets/portrait-girl.jpg");
+  padding: 0px 15px;
+  text-align: center;
+  margin: 0;
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main__titlesection {
+  flex-direction: column;
+  align-content: flex-end;
+  padding-bottom: 50px;
+}
+
+.main__title {
+  color: #fff;
+  font-family: 'Allura', cursive;
+  font-weight: 400;
+  font-size: 3.5em;
+  margin: 0;
+}
+
+.main__subtitle {
+  color: #fff;
+  margin-top: -15px;
+  font-weight: 400;
+  font-size: 0.8em;
+}
