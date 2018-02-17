@@ -12,11 +12,12 @@
   z-index: 2;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0px 1px 1px rgba(83, 83, 83, 0.1);
+  transition: all 0.5s;
 }
 
 .js-nav__section-filled {
   background: white;
-  color: black;
+  /* possible drop shadow */
 }
 
 .nav__list {
