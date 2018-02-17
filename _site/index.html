@@ -11,28 +11,39 @@
   <link rel="canonical" href="http://localhost:4000/angelaaydphotography/">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='styleshet' type='text/css'>
-  <script src=http://localhost:4000/angelaaydphotography/js/script.js></script>
+  <script>let navBar = document.querySelector('nav');
+
+function navBG() {
+  if (window.scrollY > window.innerHeight / 2) {
+    console.log(navBar);
+    navBar.classList.add('js-nav__section-filled');
+  } else {
+    console.log('Remove class');
+    navBar.classList.remove('js-nav__section-filled');
+  }
+}
+
+window.addEventListener('scroll', navBG);
+</script>
 </head>
 
 
 <body>
-  <aside>
-  <div class="container">
-    <nav>
-      <ul>
-        <li><a href="/angelaaydphotography/" class="nav__link">Home</a></li>
-         
-        <li><a href="/angelaaydphotography/about/" class="nav__link">About</a></li>
-          
-        <li><a href="/angelaaydphotography/contact/" class="nav__link">Contact</a></li>
-                   
-        <li><a href="/angelaaydphotography/blog" class="nav__link">Blog</a></li>
-      </ul>
-    </nav>
+  <nav class="nav__section">
+  <div class="nav__area">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="/angelaaydphotography/" class="nav__link">Home</a></li>
+       
+      <li class="nav__item"><a href="/angelaaydphotography/about/" class="nav__link">About</a></li>
+        
+      <li class="nav__item"><a href="/angelaaydphotography/contact/" class="nav__link">Contact</a></li>
+                 
+      <li class="nav__item"><a href="/angelaaydphotography/blog" class="nav__link">Blog</a></li>
+    </ul>
   </div>
-</aside>
+</nav>
 
-<header>
+  <header>
   <div class="main__titlesection">
     <h1 class="main__title">Angela Ayd Photography</h1>
     <h4 class="main__subtitle">Capturing the moments that captivate your heart</h4>
