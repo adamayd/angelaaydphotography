@@ -11,15 +11,15 @@
   <link rel="canonical" href="http://localhost:4000/angelaaydphotography/">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='styleshet' type='text/css'>
-  <script>let navBar = document.querySelector('nav');
+  <script>var navBar = document.querySelector('nav');
 
 function navBG() {
   if (window.scrollY > window.innerHeight / 2) {
-    console.log(navBar);
-    navBar.classList.add('js-nav__section-filled');
+    console.log(document.querySelector('.nav__section'));
+    document.querySelector('.nav__section').classList.add('js-nav__section-filled');
   } else {
     console.log('Remove class');
-    navBar.classList.remove('js-nav__section-filled');
+    document.querySelector('.nav__section').classList.remove('js-nav__section-filled');
   }
 }
 

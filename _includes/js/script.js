@@ -1,12 +1,12 @@
-let navBar = document.querySelector('nav');
+var navBar = document.querySelector('nav');
 
 function navBG() {
   if (window.scrollY > window.innerHeight / 2) {
-    console.log(navBar);
-    navBar.classList.add('js-nav__section-filled');
+    console.log(document.querySelector('.nav__section'));
+    document.querySelector('.nav__section').classList.add('js-nav__section-filled');
   } else {
     console.log('Remove class');
-    navBar.classList.remove('js-nav__section-filled');
+    document.querySelector('.nav__section').classList.remove('js-nav__section-filled');
   }
 }
 
