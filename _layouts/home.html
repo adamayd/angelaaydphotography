@@ -1,32 +1,40 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+{% include head.html %}
 
-<div class="home">
-
-  <h1 class="page-heading">Latest Works</h1>
+<body>
+  {% include navigation.html %}
+  {% include header.html %}
+  <div class="works__section">
+    <div class="works__area">
+      <h1 class="page-heading">Latest Works</h1>
   
-  {{ content }}
+      {{ content }}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-</div>
-<div class="teaser__section">
-  <div class="teaser__area">
-    <h1 class="teaser__title">More About Me</h1>
-    <img src="https://picsum.photos/900/650" alt="Workspace photo" />
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li>
+            {% assign date_format = "%b %-d, %Y" %}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+  
+            <h2>
+              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h2>
+          </li>
+        {% endfor %}
+      </ul>
+  
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    </div>
   </div>
-</div>
+  <div class="teaser__section">
+    <div class="teaser__area">
+      <h1 class="teaser__title">More About Me</h1>
+      <img src="https://picsum.photos/900/650" alt="Workspace photo" />
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+
+</html>
+
