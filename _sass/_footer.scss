@@ -16,6 +16,9 @@
   font-size: 0.9em; 
   font-family: 'Josefin Sans', sans-serif;
   color: $grey;
+  &:last-of-type {
+    padding-right: 0;
+  }
 }
 
 .footer__para {
@@ -35,6 +38,7 @@
 
 .footer__input {
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
   width: 100%;
   border: none;
   border-bottom: 1px solid $grey;
@@ -46,6 +50,7 @@
   width: 100%;
   border: none;
   background-color: $grey;
+  font-family: 'Josefin Sans', sans-serif;
   color: white;
   padding: 10px;
 }
