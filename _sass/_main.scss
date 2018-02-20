@@ -4,15 +4,39 @@ main {
   margin: 0 auto;
 }
 
-.works__section {
+.portf__section {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.works__area {
+.portf__area {
   width: 900px;
   margin: 0 auto;
+}
+
+.imggrid__containter {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.imggrid__row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.imggrid__col {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.imggrid__image {
+  margin-top: 8px;
+  vertical-align: middle;
+  max-width: 100%;
 }
 
 .teaser__section {
