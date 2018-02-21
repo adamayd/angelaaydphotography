@@ -14,44 +14,31 @@
       <div class="imggrid__container">
         <div class="imggrid__row">
           <div class="imggrid__col">
-            <img class="imggrid__image" src="https://picsum.photos/g/200/300/" alt="grayscale random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
+            {% for post in site.posts limit:4 %}
+              <img src="{{ post.image }}" class="imggrid__image" alt="post image" />
+              <caption>{{ post.title }}</caption>
+            {% endfor %}
           </div>
           <div class="imggrid__col">
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/g/200/300/" alt="grayscale random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
+            {% for post in site.posts limit:4 offset:4 %}
+              <img src="{{ post.image }}" class="imggrid__image" alt="post image" />
+              <caption>{{ post.title }}</caption>
+            {% endfor %}
           </div>
           <div class="imggrid__col">
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/g/200/300/" alt="grayscale random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
+            {% for post in site.posts limit:4 offset:8 %}
+              <img src="{{ post.image }}" class="imggrid__image" alt="post image" />
+              <caption>{{ post.title }}</caption>
+            {% endfor %}
           </div>
           <div class="imggrid__col">
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/300/200/?random" alt="random image" />
-            <img class="imggrid__image" src="https://picsum.photos/g/200/300/" alt="grayscale random image" />
+            {% for post in site.posts limit:4 offset:12 %}
+              <img src="{{ post.image }}" class="imggrid__image" alt="post image" />
+              <caption>{{ post.title }}</caption>
+            {% endfor %}
           </div>
         </div>
       </div>
-
-      <!-- <ul class="post-list">
-        {% for post in site.posts %}
-          <li>
-            {% assign date_format = "%b %-d, %Y" %}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-  
-            <h2>
-              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            </h2>
-          </li>
-        {% endfor %}
-      </ul> -->
   
       <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
     </div>
