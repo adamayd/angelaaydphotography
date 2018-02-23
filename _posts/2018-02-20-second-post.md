@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2018-01-31 22:03:52 -0500
+title:  "Second Post"
+date:   2018-02-21 22:03:52 -0500
 image:  https://picsum.photos/200/200/?random
 categories: jekyll update
 ---
