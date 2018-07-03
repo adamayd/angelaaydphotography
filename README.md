@@ -22,7 +22,7 @@ sudo gem install bundler
 These instructions are based on an initial installation of Ruby.  You should add the second and third lines to your `~/.profile`, `~/.bashrc`, `~/.zshrc`, etc... to load on boot.
 
 ```
-sudo pacman -Syu ruby ruby-docs
+sudo pacman -Syu ruby ruby-rdoc
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 gem install bundler
