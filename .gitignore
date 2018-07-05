@@ -1,6 +1,8 @@
-_site
-.sass-cache
-.jekyll-metadata
-*.swp
-_site
-assets/carousel*
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+
+# Build directory
+/public
+.DS_Store
