@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import logo from '../images/aaphoto_logo.jpg';
+
 const Header = ({ siteTitle }) => (
   <div
     style={{
@@ -23,7 +25,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          <img src={logo} alt="Angela Ayd Photography Logo" />
         </Link>
       </h1>
     </div>
