@@ -1,12 +1,16 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 import logo from '../images/aaphotog_logo.png';
 
 const HeaderWrapper = styled.div`
   background: #71eeb8;
   margin-bottom: 1.45rem;
+  overflow: hidden;
+  position: relative;
+  height: 70vh; 
   h1 {
     img{
       height: 100px;
@@ -18,6 +22,8 @@ const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;
+  position: relative;
+  z-index: 2;
 `;
 
 const Header = ({data}) => (
@@ -34,7 +40,6 @@ const Header = ({data}) => (
           <img src={logo} alt="Angela Ayd Photography Logo" />
         </Link>
       </h1>
-      <p>{data.site.siteMetadata.title}</p>
       <nav>
         <ul>
           <li>
@@ -46,6 +51,16 @@ const Header = ({data}) => (
         </ul>
       </nav>
     </HeaderContainer>
+    <Img 
+      style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%'
+      }}
+      sizes={data.background.sizes} 
+    />
   </HeaderWrapper>
 )
 

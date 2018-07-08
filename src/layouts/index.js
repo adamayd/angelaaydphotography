@@ -42,5 +42,10 @@ export const query = graphql`
         desc
       }
     }
+    background: imageSharp(id: {regex: "/portrait-girl.jpg/"}) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
+      }
+    }
   }
 `
