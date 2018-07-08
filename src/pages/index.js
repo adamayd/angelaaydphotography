@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Img from 'gatsby-image';
 
 const IndexPage = ({data}) => (
   <div>
     <h1>Hi people</h1>
+    <Img sizes={data.background.sizes} />
     <p>{data.site.siteMetadata.title}</p>
     <p>{data.site.siteMetadata.desc}</p>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <p>Welcome to our new Gatsby site.</p>
   </div>
 )
 
@@ -18,6 +19,11 @@ export const query = graphql`
       siteMetadata {
         title
         desc
+      }
+    }
+    background: imageSharp(id: {regex: "/portrait-girl.jpg/"}) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
       }
     }
   }
