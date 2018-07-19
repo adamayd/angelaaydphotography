@@ -21,6 +21,20 @@ cd gatsby-example-site
 gatsby develop
 ```
 
+## Technologies Used
+* NodeJS 10.6.0
+
+## Troubleshooting
+
+#### Error: ENOSPC: no space left on device, watch '/home/adam/source/projects/angelaaydphotography/src/layouts'
+
+Caused by a userspace watcher limit.  Googling finds the issue with a solution for Ubuntu, the following is the fix for Arch linux using newer systemd versions.
+
+```
+sudo touch /etc/sysctl.d/99-sysctl.conf
+echo fs.inotifiy.max_user_watches=524288 | sudo tee -a /etc/sysctl.d/99-sysctl.conf && sudo sysctl -p /etc/sysctl.d/99-sysctl.conf
+```
+
 ## Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
