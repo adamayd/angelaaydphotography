@@ -1,17 +1,16 @@
 import React from 'react';
+import PostListing from '../components/postlisting';
 
 const IndexPage = ({data}) => (
   <div>
-    <h1>Hi people</h1>
-    <p>{data.site.siteMetadata.title}</p>
-    <p>{data.site.siteMetadata.desc}</p>
-    {data.allMarkdownRemark.edges.map(({node}) => {
-      return <PostListing post={node} />
-    })}
+    {/* <p>{data.site.siteMetadata.title}</p>
+    <p>{data.site.siteMetadata.desc}</p> */}
+    <h2>Posts</h2>
+    {data.allMarkdownRemark.edges.map(({node}) => (
+      <PostListing key= {node.id} post={node} />
+    ))}
   </div>
 )
-
-const PostListing = () => <div>hello</div>;
 
 export default IndexPage
 
@@ -26,11 +25,13 @@ export const query = graphql`
     allMarkdownRemark {
       edges {
         node {
+          id
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
           }
           html
+          excerpt
         }
       }
     }
