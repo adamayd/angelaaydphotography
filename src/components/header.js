@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 import logo from '../images/aaphotog_logo.png';
 
 const HeaderWrapper = styled.div`
-  background: #71eeb8;
+  background: black;
   margin-bottom: 1.45rem;
   overflow: hidden;
   position: relative;
@@ -25,7 +25,28 @@ const HeaderContainer = styled.div`
   padding: 1.45rem 1.0875rem;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
 `;
+
+const MainNav = styled.nav`
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin-left: 10px;
+      font-family: sans-serif;
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          border-bottom: 3px solid #71eeb8;
+        }
+      }
+    }
+  }
+`;
+
 
 class Header extends React.Component {
   componentDidUpdate = (prevProps, prevState) => {
@@ -47,7 +68,7 @@ class Header extends React.Component {
           { height: "70vh" },
           { height: "20vh" }
         ], {
-          duration: 750,
+          duration: 300,
           fill: "forwards", 
           easing: "cubic-bezier(0.86, 0, 0.07, 1)",
           iterations: 1
@@ -75,7 +96,7 @@ class Header extends React.Component {
               <img src={logo} alt="Angela Ayd Photography Logo" />
             </Link>
           </h1>
-          <nav>
+          <MainNav>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -84,7 +105,7 @@ class Header extends React.Component {
                 <Link to="/about">About</Link>
               </li>
             </ul>
-          </nav>
+          </MainNav>
         </HeaderContainer>
         <Img 
           style={{
@@ -92,7 +113,8 @@ class Header extends React.Component {
             left: 0,
             top: 0,
             width: '100%',
-            height: '100%'
+            height: '100%',
+            opacity: 0.7
           }}
           sizes={data.background.sizes} 
         />
