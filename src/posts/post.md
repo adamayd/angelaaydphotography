@@ -1,5 +1,5 @@
 ---
-title: "Welcome to the New Site"
+title: "Test site is live!"
 date: "2018-07-18"
 ---
 
