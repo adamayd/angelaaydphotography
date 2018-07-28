@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: adamayd/angelaaydphotography
 
 media_folder: static/assets
 
