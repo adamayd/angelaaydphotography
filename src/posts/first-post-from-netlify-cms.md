@@ -1,7 +1,7 @@
 ---
 title: First Post from Netlify CMS
 date: '2018-07-28'
-image: /assets/tux-apple.jpg
+thumbnail: /assets/tux-apple.jpg
 ---
 ![Angela Ayd Photography Logo](/assets/aaphotog_logo.png)
 
