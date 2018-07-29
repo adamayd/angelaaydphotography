@@ -3,7 +3,7 @@ title: First Post from Netlify CMS
 date: '2018-07-28'
 image: /static/assets/aaphotog_logo.png
 ---
-![Tux eating an apple.](/static/assets/tux-apple.jpg)
+![Tux eating an apple.](/assets/tux-apple.jpg)
 
 ## Secondary Heading
 

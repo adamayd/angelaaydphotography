@@ -3,6 +3,7 @@ import React from 'react';
 class PostPage extends React.Component {
   render() {
     const { data } = this.props;
+    if (!data) return null;
     return(
       <div>
         <span>{data.markdownRemark.frontmatter.date}</span>
