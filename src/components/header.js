@@ -11,7 +11,7 @@ const HeaderWrapper = styled.div`
   margin-bottom: 1.45rem;
   overflow: hidden;
   position: relative;
-  height: ${({ isHome }) => (isHome ? '70vh' : '20vh')};
+  height: ${({ isHome }) => (!isHome ? '20vh' : '70vh')};
   h1 {
     img{
       height: 100px;
@@ -63,7 +63,7 @@ class Header extends React.Component {
           easing: "cubic-bezier(0.86, 0, 0.07, 1)",
           iterations: 1
         })
-      } else {
+      } else if (prevProps.location.pathname === '/') {
         this.wrapper.animate([
           { height: "70vh" },
           { height: "20vh" }
