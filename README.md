@@ -32,7 +32,7 @@ Caused by a userspace watcher limit.  Googling finds the issue with a solution f
 
 ```
 sudo touch /etc/sysctl.d/99-sysctl.conf
-echo fs.inotifiy.max_user_watches=524288 | sudo tee -a /etc/sysctl.d/99-sysctl.conf && sudo sysctl -p /etc/sysctl.d/99-sysctl.conf
+echo fs.inotifiy.max_user_watches=524288 | sudo tee -a /etc/sysctl.d/99-sysctl.conf && sudo sysctl --system
 ```
 
 ## Deploy
