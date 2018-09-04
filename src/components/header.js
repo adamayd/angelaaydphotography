@@ -30,6 +30,7 @@ const HeaderContainer = styled.div`
 `;
 
 const MainNav = styled.nav`
+  border-bottom: 1px solid white;
   ul {
     list-style: none;
     display: flex;
@@ -68,7 +69,7 @@ class Header extends React.Component {
           { height: "70vh" },
           { height: "20vh" }
         ], {
-          duration: 300,
+          duration: 750,
           fill: "forwards", 
           easing: "cubic-bezier(0.86, 0, 0.07, 1)",
           iterations: 1
