@@ -22,7 +22,9 @@ gatsby develop
 ```
 
 ## Technologies Used
-* NodeJS 10.6.0
+* NodeJS 8.12.0
+
+*_Node updated a security patch to 8.12.0 while in development for the LTS.  Make sure to run `npm rebuild` to fix gatsby installation or it will not compile_*
 
 ## Troubleshooting
 
