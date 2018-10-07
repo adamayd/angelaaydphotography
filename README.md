@@ -22,7 +22,9 @@ gatsby develop
 ```
 
 ## Technologies Used
-* NodeJS 10.6.0
+* NodeJS 8.12.0
+
+*_Node moved LTS from 8.11.4 to 8.12.0 during development.  Run `npm rebuild` to fix errors_*
 
 ## Troubleshooting
 
