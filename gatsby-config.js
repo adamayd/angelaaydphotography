@@ -7,13 +7,6 @@ module.exports = {
     'gatsby-plugin-react-helmet', 
     'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-source-contentful',
-      options: {
-        spaceId: "b29ircqr37nb",
-        accessToken: "244aaf2859a3422f81491b9b3ff779e132bf7dcd6664f65540e5218405c3bcc0"
-      }
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
@@ -34,8 +27,18 @@ module.exports = {
         path: `${__dirname}/static/assets`
       }
     },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        excerpt_separator: `<!--- end --->`
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+<<<<<<< HEAD
     'gatsby-transformer-remark'
+=======
+    'gatsby-plugin-netlify-cms',
+>>>>>>> parent of a4857d5... refactoring to move CMS to contentful
   ],
 }

@@ -22,6 +22,7 @@ export const query = graphql`
         desc
       }
     }
+<<<<<<< HEAD
     allContentfulBlogPost {
       edges {
         node {
@@ -34,6 +35,24 @@ export const query = graphql`
           }
           slug
           id
+=======
+    allMarkdownRemark(sort: {
+      fields: [frontmatter___date],
+      order: DESC
+    }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+          }
+          fields {
+            slug
+          }
+          html
+          excerpt
+>>>>>>> parent of a4857d5... refactoring to move CMS to contentful
         }
       }
     }
