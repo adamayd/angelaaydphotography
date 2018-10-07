@@ -6,11 +6,11 @@ class PostPage extends React.Component {
     if (!data) return null;
     return(
       <div>
-        <span>{data.contentfulBlogPost.createdAt}</span>
-        <h1>{data.contentfulBlogPost.title}</h1>
+        <span>{data.markdownRemark.frontmatter.date}</span>
+        <h1>{data.markdownRemark.frontmatter.title}</h1>
         <div
           dangerouslySetInnerHTML={{
-            __html: data.contentfulBlogPost.body.childMarkdownRemark.html
+            __html: data.markdownRemark.html
           }}
         />
       </div>
@@ -22,6 +22,7 @@ export default PostPage;
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     contentfulBlogPost(slug: {eq: $slug}) {
       title
@@ -47,5 +48,7 @@ export const query = graphql`
       }
 >>>>>>> parent of a4857d5... refactoring to move CMS to contentful
     }
+=======
+>>>>>>> parent of 73ce061... corrected queries and renders for contentful
   }
 `;

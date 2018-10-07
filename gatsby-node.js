@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 const path = require('path');
 <<<<<<< HEAD
+=======
+// const path = require('path');
+>>>>>>> parent of 73ce061... corrected queries and renders for contentful
 // const { createFilePath } = require('gatsby-source-filesystem');
 =======
 const { createFilePath } = require('gatsby-source-filesystem');
@@ -21,6 +25,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 }
 
+<<<<<<< HEAD
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
   return new Promise((resolve, reject) => {
@@ -66,3 +71,34 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     })
   })
 }
+=======
+// exports.createPages = ({ graphql, boundActionCreators }) => {
+//   const { createPage } = boundActionCreators;
+//   return new Promise((resolve, reject) => {
+//     graphql(`
+//       {
+//         allMarkdownRemark {
+//           edges {
+//             node {
+//               fields{
+//                 slug
+//               }
+//             }
+//           }
+//         }
+//       }
+//     `).then(result => {
+//       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+//         createPage({
+//           path: node.fields.slug,
+//           component: path.resolve('./src/posts/PostPage.js'),
+//           context: {
+//             slug: node.fields.slug
+//           }
+//         })
+//       })
+//       resolve();
+//     })
+//   })
+// }
+>>>>>>> parent of 73ce061... corrected queries and renders for contentful

@@ -6,7 +6,7 @@ const IndexPage = ({data}) => (
     {/* <p>{data.site.siteMetadata.title}</p>
     <p>{data.site.siteMetadata.desc}</p> */}
     <h2>Posts</h2>
-    {data.allContentfulBlogPost.edges.map(({node}) => (
+    {data.allMarkdownRemark.edges.map(({node}) => (
       <PostListing key= {node.id} post={node} />
     ))}
   </div>
@@ -22,6 +22,7 @@ export const query = graphql`
         desc
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     allContentfulBlogPost {
       edges {
@@ -56,5 +57,7 @@ export const query = graphql`
         }
       }
     }
+=======
+>>>>>>> parent of 73ce061... corrected queries and renders for contentful
   }
 `;
