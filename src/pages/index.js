@@ -22,21 +22,6 @@ export const query = graphql`
         desc
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    allContentfulBlogPost {
-      edges {
-        node {
-          title
-          createdAt(formatString: "MMMM DD, YYYY")
-          body {
-            childMarkdownRemark {
-              excerpt
-            }
-          }
-          slug
-          id
-=======
     allMarkdownRemark(sort: {
       fields: [frontmatter___date],
       order: DESC
@@ -53,11 +38,8 @@ export const query = graphql`
           }
           html
           excerpt
->>>>>>> parent of a4857d5... refactoring to move CMS to contentful
         }
       }
     }
-=======
->>>>>>> parent of 73ce061... corrected queries and renders for contentful
   }
 `;

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 const path = require('path');
-<<<<<<< HEAD
-=======
-// const path = require('path');
->>>>>>> parent of 73ce061... corrected queries and renders for contentful
-// const { createFilePath } = require('gatsby-source-filesystem');
-=======
 const { createFilePath } = require('gatsby-source-filesystem');
->>>>>>> parent of a4857d5... refactoring to move CMS to contentful
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
@@ -25,45 +17,28 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 }
 
-<<<<<<< HEAD
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
   return new Promise((resolve, reject) => {
     graphql(`
       {
-<<<<<<< HEAD
-        allContentfulBlogPost {
-          edges {
-            node {
-              slug
-=======
         allMarkdownRemark {
           edges {
             node {
               fields{
                 slug
               }
->>>>>>> parent of a4857d5... refactoring to move CMS to contentful
             }
           }
         }
       }
     `).then(result => {
-<<<<<<< HEAD
-      result.data.allContentfulBlogPost.edges.forEach(({ node }) => {
-        createPage({
-          path: node.slug,
-          component: path.resolve('./src/posts/PostPage.js'),
-          context: {
-            slug: node.slug
-=======
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
           component: path.resolve('./src/posts/PostPage.js'),
           context: {
             slug: node.fields.slug
->>>>>>> parent of a4857d5... refactoring to move CMS to contentful
           }
         })
       })
@@ -71,34 +46,3 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     })
   })
 }
-=======
-// exports.createPages = ({ graphql, boundActionCreators }) => {
-//   const { createPage } = boundActionCreators;
-//   return new Promise((resolve, reject) => {
-//     graphql(`
-//       {
-//         allMarkdownRemark {
-//           edges {
-//             node {
-//               fields{
-//                 slug
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `).then(result => {
-//       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//         createPage({
-//           path: node.fields.slug,
-//           component: path.resolve('./src/posts/PostPage.js'),
-//           context: {
-//             slug: node.fields.slug
-//           }
-//         })
-//       })
-//       resolve();
-//     })
-//   })
-// }
->>>>>>> parent of 73ce061... corrected queries and renders for contentful

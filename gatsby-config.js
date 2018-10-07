@@ -35,13 +35,6 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'gatsby-transformer-remark'
-=======
     'gatsby-plugin-netlify-cms',
->>>>>>> parent of a4857d5... refactoring to move CMS to contentful
-=======
->>>>>>> parent of 73ce061... corrected queries and renders for contentful
   ],
 }

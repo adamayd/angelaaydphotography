@@ -22,20 +22,6 @@ export default PostPage;
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contentfulBlogPost(slug: {eq: $slug}) {
-      title
-      createdAt
-      body {
-        childMarkdownRemark {
-          html
-          excerpt
-        }
-      }
-      slug
-      id
-=======
     markdownRemark(fields: {
       slug: {
         eq: $slug
@@ -46,9 +32,6 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
       }
->>>>>>> parent of a4857d5... refactoring to move CMS to contentful
     }
-=======
->>>>>>> parent of 73ce061... corrected queries and renders for contentful
   }
 `;
