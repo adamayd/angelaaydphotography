@@ -1,6 +1,7 @@
+import React from 'react'
+import NavBar from './navbar';
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React from 'react'
 
 const Header = ({ siteTitle }) => (
   <div
@@ -16,17 +17,17 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+          textAlign: `left`
+        }}
+      >
+        <h3>AAP</h3>
+      </Link>
+      <NavBar/>
     </div>
   </div>
 )
