@@ -1,10 +1,10 @@
 import React from 'react'
-import NavBar from './navbar';
+// import NavBar from './navbar';
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-const Header = ({ siteTitle }) => (
-  <div
+const Header = ({ siteTitle, menuLinks }) => (
+  /*<div
     style={{
       background: `teal`,
       marginBottom: `1.45rem`,
@@ -29,7 +29,15 @@ const Header = ({ siteTitle }) => (
       </Link>
       <NavBar/>
     </div>
-  </div>
+  </div> */
+  <nav style={{ display: 'flex', flex: 1 }}>
+    {
+      menuLinks.map(link => 
+        <li key={link.name} style={{ 'listStyleType': 'none' }}>
+          <Link to={link.link}>{link.name}</Link>
+        </li>)
+    }  
+  </nav>
 )
 
 Header.propTypes = {
