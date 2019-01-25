@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      background: `rebeccapurple`,
+      background: `teal`,
       marginBottom: `1.45rem`,
     }}
   >
