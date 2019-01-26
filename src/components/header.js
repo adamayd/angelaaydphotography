@@ -4,40 +4,41 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 const Header = ({ siteTitle, menuLinks }) => (
-  /*<div
+  <div
     style={{
       background: `teal`,
-      marginBottom: `1.45rem`,
+      marginBottom: `1.45rem`
     }}
-  >
+    >
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `0.8rem 1.0875rem`,
       }}
     >
-      <Link
-        to="/"
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-          textAlign: `left`
-        }}
-      >
-        <h3>AAP</h3>
-      </Link>
-      <NavBar/>
+      <nav style={{ display: 'flex', justifyContent: 'center', }}>
+        {
+          menuLinks.map(link => 
+            <li key={link.name} style={{ 'listStyleType': 'none', marginBottom: 0 }}>
+              <Link to={link.link}
+                style={{
+                  color: `white`,
+                  textDecoration: `none`,
+                  textAlign: `left`,
+                  padding: '20px',
+                  fontFamily: 'sans-serif',
+                  textTransform: 'uppercase',
+                  fontSize: '0.7rem',
+                  fontWeight: 700
+                }}
+              >{link.name}</Link>
+            </li>
+          )
+        }  
+      </nav>
     </div>
-  </div> */
-  <nav style={{ display: 'flex', flex: 1 }}>
-    {
-      menuLinks.map(link => 
-        <li key={link.name} style={{ 'listStyleType': 'none' }}>
-          <Link to={link.link}>{link.name}</Link>
-        </li>)
-    }  
-  </nav>
+  </div>
 )
 
 Header.propTypes = {
