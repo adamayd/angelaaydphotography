@@ -10,11 +10,11 @@ export default () => (
       <p style={{color: 'grey'}}>Lorem ipsum dolor amet celiac synth microdosing health goth raclette +1 master cleanse kogi. PBR&amp;B typewriter mixtape gastropub tbh cronut bushwick lo-fi whatever thundercats messenger bag taxidermy cardigan. Sriracha health goth fashion axe brunch occupy dreamcatcher try-hard tacos taxidermy. Narwhal paleo fam butcher mlkshk swag. Photo booth enamel pin leggings, copper mug PBR&amp;B gochujang portland bitters mlkshk you probably haven't heard of them fingerstache flexitarian.</p>
     </div>
     <div style={{display: 'flex'}}>
-      <h3 style={{flex: `1 0 33%`}}>Gear</h3>
+      <h3 style={{flex: `1 0 33%`}}>Pricing</h3>
       <p style={{flex: `1 0 66%`}}>Lorem ipsum dolor amet celiac synth microdosing health goth raclette +1 master cleanse kogi. PBR&amp;B typewriter mixtape gastropub tbh cronut bushwick lo-fi whatever thundercats messenger bag taxidermy cardigan. Sriracha health goth fashion axe brunch occupy dreamcatcher try-hard tacos taxidermy. Narwhal paleo fam butcher mlkshk swag. Photo booth enamel pin leggings, copper mug PBR&amp;B gochujang portland bitters mlkshk you probably haven't heard of them fingerstache flexitarian.</p>
     </div>
     <div style={{display: 'flex'}}>
-      <h3 style={{flex: `1 0 33%`}}>Experience</h3>
+      <h3 style={{flex: `1 0 33%`}}>Gear</h3>
       <p style={{flex: `1 0 33%`}}>Lorem ipsum dolor amet celiac synth microdosing health goth raclette +1 master cleanse kogi. PBR&amp;B typewriter mixtape gastropub tbh cronut bushwick lo-fi whatever thundercats messenger bag taxidermy cardigan.</p>
       <p style={{flex: `1 0 33%`}}>Lorem ipsum dolor amet celiac synth microdosing health goth raclette +1 master cleanse kogi. PBR&amp;B typewriter mixtape gastropub tbh cronut bushwick lo-fi whatever thundercats messenger bag taxidermy cardigan.</p>
       </div>
