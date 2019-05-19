@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-export default () => (
+const Portfolio = () => (
   <Layout>
     <SEO title="Portfolio" keywords={[`Angela Ayd Photography`, `portfolio`]} />
     <div style={{ color: `teal` }}>
@@ -11,3 +11,5 @@ export default () => (
     </div>
   </Layout>
 )
+
+export default Portfolio

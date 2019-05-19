@@ -38,7 +38,8 @@ const Header = ({ siteTitle, menuLinks, location }) => (
                   padding: '20px',
                   textTransform: 'uppercase',
                   fontSize: '0.7rem',
-                  fontWeight: 700
+                  fontWeight: 700,
+                  fontFamily: `'Amatic SC', sans-serif`
                 }}
               >{link.name}</Link>
             </li>

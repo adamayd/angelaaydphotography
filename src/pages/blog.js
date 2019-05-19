@@ -10,7 +10,6 @@ const Blog = ({ data }) => (
     <div>
       <h1>Angela Ayd Photography Blog</h1>
       <p>Blogging about things in the photography-sphere</p>
-      <p>{data.allMarkdownRemark.totalCount}</p>
       <ul>
         {data.allMarkdownRemark.edges.map((edge) => {
           return (

@@ -61,7 +61,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               )
               .concat(meta)}
           >
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Tangerine&amp;display=swap" rel="stylesheet"/>
           </Helmet>
         )
       }}

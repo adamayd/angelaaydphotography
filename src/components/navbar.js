@@ -8,10 +8,10 @@ const NavBar = () => {
         display: `flex`,
         flexDirection: `row`,
         alignItems: `center`,
-        justifyContent: `space-between`
+        justifyContent: `space-between`,
       }}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" style={{ fontFamily: `'Amatic SC', sans-serif` }}>Homer</Link>
         </li>
         <li>
           <Link to="/portfolio">Portfolio</Link>
