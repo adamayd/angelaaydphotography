@@ -36,7 +36,6 @@ const Header = ({ siteTitle, menuLinks, location }) => (
                   textDecoration: `none`,
                   textAlign: `left`,
                   padding: '20px',
-                  fontFamily: 'sans-serif',
                   textTransform: 'uppercase',
                   fontSize: '0.7rem',
                   fontWeight: 700
