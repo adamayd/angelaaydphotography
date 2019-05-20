@@ -23,7 +23,8 @@ const Header = ({ menuLinks, location }) => (
         width: `100%`,
         padding: `0.8rem 1.0875rem`,
         borderBottom: `1px rgba(0,0,0,0.75) solid`,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        zIndex: `3`
       }}
     >
       <nav style={{ display: 'flex', justifyContent: 'center' }}>
