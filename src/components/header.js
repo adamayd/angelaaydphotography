@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // import StyledBackgroundSection from './backgroundsection';
 import bgImg from '../images/portrait-girl.jpg';
 
-const Header = ({ siteTitle, menuLinks, location }) => (
+const Header = ({ menuLinks, location }) => (
   <div
     style={{
       backgroundImage: `linear-gradient(rgba(0,0,0,0.3),rgba(255,255,255,0.2)), url(${bgImg})`,
@@ -51,11 +51,8 @@ const Header = ({ siteTitle, menuLinks, location }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+  location: PropTypes.string.isRequired,
+  menuLinks: PropTypes.arrayOf(PropTypes.shape).isRequired
 }
 
 export default Header

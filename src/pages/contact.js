@@ -10,10 +10,8 @@ class Contact extends Component {
   }
 
   handleInputChange = ev => {
-    const target = ev.target
-    const value = target.value
-    const name = target.name
-
+    const { target } = ev
+    const { value, name } = target
     this.setState({
       [name]: value
     })
@@ -21,10 +19,12 @@ class Contact extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
-    alert(`Thank you ${this.state.name} for contacting us!!`)
+    const { name } = this.state
+    console.log(`Thank you ${name} for contacting us!!`)
   }
 
   render() {
+    const { name, email, message } = this.state
     return (
       <Layout>
         <SEO title="Contact" keywords={[`Angela Ayd Photography`, `contact`]} />
@@ -56,7 +56,7 @@ class Contact extends Component {
                 borderBottom: '1px dashed grey',
                 margin: '5px'
               }}
-              value={this.state.name}
+              value={name}
               onChange={this.handleInputChange}
             />
             <input 
@@ -70,7 +70,7 @@ class Contact extends Component {
                 borderBottom: '1px dashed grey',
                 margin: '5px'
               }}
-              value={this.state.email}
+              value={email}
               onChange={this.handleInputChange}
             />
             <textarea
@@ -86,7 +86,7 @@ class Contact extends Component {
                 borderBottom: '1px dashed grey',
                 margin: '5px'
               }}
-              value={this.state.message}
+              value={message}
               onChange={this.handleInputChange}
             ></textarea>
             <button 
