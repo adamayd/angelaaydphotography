@@ -19,8 +19,8 @@ class Contact extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
-    const { name } = this.state
-    console.log(`Thank you ${name} for contacting us!!`)
+    // const { name } = this.state
+    // console.log(`Thank you ${name} for contacting us!!`)
   }
 
   render() {

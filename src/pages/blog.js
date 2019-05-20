@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -14,8 +14,10 @@ const Blog = ({ data }) => (
         {data.allMarkdownRemark.edges.map((edge) => {
           return (
             <li key={edge.node.id}>
-              <h2>{edge.node.frontmatter.title} <span style={{ fontSize: `0.7em` }}>{edge.node.frontmatter.date}</span></h2>            
-              <p>{edge.node.excerpt}</p>
+              <Link to={edge.node.frontmatter.path}>
+                <h2>{edge.node.frontmatter.title} <span style={{ fontSize: `0.7em` }}>{edge.node.frontmatter.date}</span></h2>            
+                <p>{edge.node.excerpt}</p>
+              </Link>
             </li>
         )})}
       </ul>
